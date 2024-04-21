@@ -25,7 +25,8 @@ def canUnlockAll(boxes):
     while (new_keys):
         nxt_keys = set()
         for key in new_keys:
-            nxt_keys.update(boxes[key])
+            if key < n:
+                nxt_keys.update(boxes[key])
 
         nxt_keys = nxt_keys - all_keys - new_keys
 
