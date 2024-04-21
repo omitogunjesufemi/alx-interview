@@ -19,14 +19,15 @@ def canUnlockAll(boxes):
     n = len(boxes)
 
     new_keys = set()
-    new_keys.update(boxes[0])
+    first_box = [x for x in boxes[0] if x < n]
+    new_keys.update(first_box)
     all_keys.update(new_keys)
 
     while (new_keys):
         nxt_keys = set()
         for key in new_keys:
-            if key < n:
-                nxt_keys.update(boxes[key])
+            nxt_box = [x for x in boxes[key] if x < n]
+            nxt_keys.update(nxt_box)
 
         nxt_keys = nxt_keys - all_keys - new_keys
 
