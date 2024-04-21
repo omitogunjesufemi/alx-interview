@@ -17,20 +17,20 @@ def canUnlockAll(boxes):
     """
     all_keys = set([0])
     n = len(boxes)
-    
+
     new_keys = set()
     new_keys.update(boxes[0])
     all_keys.update(new_keys)
-    
+
     while (new_keys):
         nxt_keys = set()
         for key in new_keys:
             nxt_keys.update(boxes[key])
-        
+
         nxt_keys = nxt_keys - all_keys - new_keys
-        
+
         new_keys.clear()
         new_keys.update(nxt_keys)
         all_keys.update(new_keys)
-    
+
     return len(all_keys) == n
