@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Algorithm question:
 A method that determines if all the boxes can be opened
