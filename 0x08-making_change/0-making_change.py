@@ -19,6 +19,9 @@ def makeChange(coins, total):
     if total == 0:
         return 0
 
+    if len(coins) == 0:
+        return -1
+
     min_num_of_coins = 0
     coins.sort(reverse=True)
 
