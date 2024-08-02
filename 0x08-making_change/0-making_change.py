@@ -29,11 +29,14 @@ def makeChange(coins, total):
         if total == 0:
             return min_num_of_coins
 
-        if coin < total:
+        if coin <= total:
             num_of_coin = total // coin
             total = total - (num_of_coin * coin)
+            print("total: ", total)
             min_num_of_coins += num_of_coin
+            print("min_coins: ", min_num_of_coins)
 
+    print()
     if total > 0:
         min_num_of_coins = -1
 
