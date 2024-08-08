@@ -50,5 +50,7 @@ def isWinner(x, nums):
 
     if even > odd:
         return "Ben"
+    elif odd > even:
+        return "Maria"
 
-    return "Maria"
+    return None
