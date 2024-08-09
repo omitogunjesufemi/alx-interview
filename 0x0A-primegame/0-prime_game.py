@@ -19,7 +19,7 @@ def isWinner(x, nums):
     Return: name of the player that won the most rounds
     If the winner cannot be determined, return `None`
     """
-    if len(nums) <= 0 or x == 0:
+    if len(nums) <= 0 or x <= 0:
         return None
 
     move_list = []
